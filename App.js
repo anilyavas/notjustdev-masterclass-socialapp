@@ -1,11 +1,12 @@
 import { SafeAreaView, StyleSheet } from 'react-native';
 import FeedScreen from './src/screens/FeedScreen';
 import { StatusBar } from 'expo-status-bar';
+import CreatePostScreen from './src/screens/CreatePostScreen';
 
 export default function App() {
   return (
     <SafeAreaView styles={styles.container}>
-      <FeedScreen />
+      <CreatePostScreen />
       <StatusBar style='auto' />
     </SafeAreaView>
   );
@@ -14,7 +15,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
