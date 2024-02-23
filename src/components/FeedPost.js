@@ -7,13 +7,18 @@ import {
 } from '@expo/vector-icons';
 import LikeImage from '../../assets/images/like.png';
 import { useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 export const FeedPost = ({ post }) => {
+  const navigation = useNavigation();
   const [isLiked, setIsLiked] = useState(false);
   return (
     <View style={styles.container}>
       <View style={styles.post}>
-        <View style={styles.header}>
+        <Pressable
+          style={styles.header}
+          onPress={() => navigation.navigate('Profile')}
+        >
           <Image
             source={{ uri: post.User.image }}
             style={styles.profileImage}
@@ -28,7 +33,7 @@ export const FeedPost = ({ post }) => {
             color='gray'
             style={styles.icon}
           />
-        </View>
+        </Pressable>
 
         <Text style={styles.description}>{post.description}</Text>
         {post.image && (
