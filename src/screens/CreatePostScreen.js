@@ -10,7 +10,7 @@ const user = {
   name: 'Vadim Savin',
 };
 
-const CreatePostScreen = () => {
+export default function CreatePostScreen() {
   const [description, setDescription] = useState('');
   const [image, setImage] = useState(null);
 
@@ -60,7 +60,7 @@ const CreatePostScreen = () => {
       </View>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -100,5 +100,3 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
 });
-
-export default CreatePostScreen;
