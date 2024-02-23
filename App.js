@@ -1,16 +1,10 @@
-import { View, StyleSheet } from 'react-native';
 import Navigator from './src/navigation';
+import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
   return (
-    <View styles={styles.container}>
+    <NavigationContainer>
       <Navigator />
-    </View>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
